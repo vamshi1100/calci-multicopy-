@@ -1,0 +1,89 @@
+* {
+    border: 0px;
+    margin: 0px;
+    font-size: 32px;
+    font-family: serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0px;
+}
+
+.display {
+    width: 90%;
+    height: 10vh;
+    /* border: 2px solid red; */
+
+}
+
+h1 {
+    font-family: cursive;
+}
+
+input {
+    width: 99.6%;
+    height: 10vh;
+    /* border: 2px dotted black;   */
+    background-image: linear-gradient(black, white, rgb(153, 167, 218));
+    font-family: cursive;
+}
+
+.buttons {
+    width: 90%;
+    /* height: 80vh; */
+    /* border: 2px dotted black; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    background-image: linear-gradient(black, white, rgb(153, 167, 218));
+
+}
+
+button {
+    width: 25%;
+    height: 10vh;
+    padding: 5px;
+    font-family: cursive;
+}
+
+.calculatebtn {
+    width: 100%;
+    margin: 15px;
+}
+
+
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.history button {
+    background-image: linear-gradient(rgb(155, 146, 146), rgb(227, 219, 219), rgb(172, 182, 218));
+    color: black;
+    margin: 20px;
+    /* border: 2px solid black; */
+    width: 200px;
+    height: 50px;
+    font-size: 20px !important;
+    border-radius: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.main {
+    border: ridge 20px rgb(160, 176, 217);
+}
