@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
 const port = 3000;
+const { MongoClient } = require("mongodb");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "public/html"));
@@ -27,6 +28,29 @@ mongoose
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);
   });
+
+async function fetchData() {
+  const uri = "mongodb://localhost:27017/?directConnection=true"; // Replace with your connection string
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  try {
+    await client.connect();
+    const database = client.db("calculator"); // Replace with your database name
+    const collection = database.collection("calci"); // Replace with your collection name
+
+    const data = await collection.find({}).toArray(); // Fetch all documents
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  } finally {
+    await client.close();
+  }
+}
+
+fetchData();
 
 app.get("/", (req, res) => {
   res.render("calci");

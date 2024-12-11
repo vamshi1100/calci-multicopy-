@@ -15,10 +15,3 @@ import { Controller } from "../../controller/controller.js";
   const view = new View(containerId, 2);
   new Controller(model, view);
 })();
-
-(() => {
-  const containerId = "calculatorsContainer";
-  const model = new Model(containerId, 3);
-  const view = new View(containerId, 3);
-  new Controller(model, view);
-})();
